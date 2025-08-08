@@ -1,7 +1,9 @@
-joke_app/
+joke_generator/
 │
-├── app.py             ← Python backend
+├── app.py               # Flask backend for web version
+├── cli_jokes.py         # CLI script
 ├── templates/
-│   └── index.html     ← HTML frontend (with Tailwind)
-└── static/
-    └── script.js      ← JavaScript to call backend
+│   └── index.html       # Web frontend (Tailwind)
+├── static/
+│   └── script.js        # JS logic: fetch, dark mode, favorites, spinner
+└── requirements.txt     # Python dependencies
