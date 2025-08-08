@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="transition-colors">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Random Joke Generator</title>
+    <meta charset="UTF-8">
+    <title>Joke Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        };
+    </script>
 </head>
 
-<body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded shadow-lg w-full max-w-xl text-center">
-        <h1 class="text-2xl font-bold mb-4">😂 Random Joke Generator</h1>
-        <div id="jokeBox" class="text-lg text-gray-700 min-h-[100px] mb-6">Click below to get a joke.</div>
-        <button onclick="fetchJoke()" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+<body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-xl text-center">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">😂 Random Joke Generator</h1>
+            <button id="darkToggle" class="text-sm text-blue-500 hover:underline">Toggle Dark Mode</button>
+        </div>
+
+        <select id="category" class="mb-4 p-2 rounded border w-full text-black">
+            <option value="Any">Any</option>
+            <option value="Programming">Programming</option>
+            <option value="Misc">Misc</option>
+            <option value="Pun">Pun</option>
+            <option value="Spooky">Spooky</option>
+            <option value="Christmas">Christmas</option>
+        </select>
+
+        <div id="jokeBox" class="min-h-[120px] text-lg mb-4 flex items-center justify-center text-center">
+            Click below to get a joke.
+        </div>
+
+        <div id="spinner" class="hidden mb-4">
+            <svg class="animate-spin h-6 w-6 text-blue-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+        </div>
+
+        <button onclick="fetchJoke()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
             Get Joke
         </button>
+        <button onclick="saveJoke()" class="ml-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+            Save Joke
+        </button>
+
+        <h2 class="text-xl font-semibold mt-6">⭐ Saved Jokes</h2>
+        <ul id="savedJokes" class="mt-2 text-sm text-left max-h-48 overflow-y-auto"></ul>
+
         <script src="/static/script.js"></script>
     </div>
 </body>
