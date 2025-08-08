@@ -27,7 +27,7 @@ Continuous Joke Generator is a fun and interactive Python project that lets you 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/joke-generator.git
+git clone https://github.com/lakhimself/joke-generator.git
 cd joke-generator
 ````
 
