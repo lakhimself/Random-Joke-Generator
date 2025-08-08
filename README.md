@@ -1,7 +1,7 @@
 
 
 ---
-# 🎭 Continuous Joke Generator – CLI & Web App
+# 🎭 Random Joke Generator – CLI & Web App
 ````markdown
 A lighthearted project that delivers jokes straight from the [JokeAPI](https://jokeapi.dev/) in two flavors:
 - 🖥️ A command-line interface (CLI) for terminal laughs
