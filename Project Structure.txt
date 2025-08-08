@@ -1,0 +1,7 @@
+joke_app/
+│
+├── app.py             ← Python backend
+├── templates/
+│   └── index.html     ← HTML frontend (with Tailwind)
+└── static/
+    └── script.js      ← JavaScript to call backend
